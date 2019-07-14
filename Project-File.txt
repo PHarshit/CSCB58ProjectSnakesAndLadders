@@ -1,0 +1,84 @@
+CSCB58 Project Report: Summer 2019
+
+Team Member A
+-------------
+First Name: Harshit 
+Last Name: Patel
+Student Number: 1004779215
+UofT E-mail Address: patel.patel@mail.utoronto.ca
+
+
+Team Member B
+-------------
+First Name: Kshitij
+Last Name: Dahal
+Student Number: 1005198046
+UofT E-mail Address: kshitij.dahal@mail.utoronto.ca
+
+Team Member C (Optional)
+-------------
+First Name: Mahamad
+Last Name: Jawid
+Student Number: 1005580961
+UofT E-mail Address: jawad.jawid@mail.utoronto.ca
+
+Team Member D (Optional)
+-------------
+First Name: Raj
+Last Name: Patel
+Student Number: 1005240721
+UofT E-mail Address: rap.patel@mail.utoronto.ca
+
+
+Project Plan
+--------
+
+Project Title: Snakes and ladders
+
+
+Provide a one paragraph description of your project:
+It's a snakes and ladders game where the counters are used to keep track of
+the players turn and registers keep track of the player's position on the board.
+Hex displays will display who's turn it is and the number rolled. A screen will be used
+to display the game pieces and the board itself. Animations will be implemented to
+enhance the movement of the game pieces.
+
+
+What is your plan for the first week?
+We will attempt to complete the counters for the player's turns and work on implementing 
+a random roll sequencer. We will also try to get the board to display on the screen.
+
+What is your plan for the second week?
+We will attempt to implement keeping track of the game pieces and begin making the animations.
+
+What is your plan for the third week?
+We will finish the animations and implement restarting the game.
+
+What is your backup plan if things don't work out as planned?
+A 2d car game where the player must avoid obstacles.
+
+
+Weekly Reports
+--------------
+<In this space, provide a report each week of what worked and what didn't, and what (if any) changes were made to your proposal)>
+
+
+[This is an example of a report where things didn't go so well.]
+Week 1: 
+	We added and tested the sensors and the main FSM. 
+	The distance sensor we had intended to use didn't work as expected (wasn't precise enough at further distances, only seems to work accurately within 5-10cm), so instead we've decided to change the project to use a light sensor instead.
+	Had trouble getting the FSM to work (kept getting stuck in state 101, took longer to debug than expected), so we may not be able to add the high score feature. We have updated that in the project description as an optional feature.
+
+
+
+References
+----------
+<In this space clearly indicate all external sources used in this project. If you used anyone else's code (from previous B58 projects or other sources) clearly indicate what you used and where you found it. Usage of any material not credited in this space will be considered plagiarism. It is absolutely OK and expected to update this section as you progress in the projected.
+
+Make sure to document what you added on top of the existing work, especially if you work with a previous project. What is it that YOU added?>
+
+
+
+Repo & Video
+------------
+<At the end of the project, provide links to your code repository and presentation video (and passwords if not public), if you don't want us to publish this info on future course websites, just say so here>
