@@ -1,82 +1,32 @@
-
-
-//this is a module to get a random 4 bit number from 1 to 12 inclusive.
-// module randomNumberGenerator (
-    // input clock,
-    // input reset,
-    // output [3:0] rnd 
-    // );
- 
-// wire feedback = random[12] ^ random[3] ^ random[2] ^ random[0]; 
- 
-// reg [12:0] random, random_next, random_done;
-// reg [3:0] count, count_next; //to keep track of the shifts
- 
-// always @ (posedge clock or posedge reset)
-// begin
- // if (reset)
- // begin
-  // random <= 13'hF; //An LFSR cannot have an all 0 state, thus reset to FF
-  // count <= 0;
- // end
-  
- // else
- // begin
-  // random <= random_next;
-  // count <= count_next;
- // end
-// end
- 
-// always @ (*)
-// begin
- // random_next = random; //default state stays the same
- // count_next = count;
-   
-  // random_next = {random[11:0], feedback}; //shift left the xor'd every posedge clock
-  // count_next = count + 1;
- 
- // if (count == 13)
- // begin
-  // count = 0;
-  // random_done = random; //assign the random number to output after 13 shifts
- // end
-  
-// end
- 
- 
-// assign rnd = random_done;
- 
-// endmodule
-
-
 //*********************************************************************
 
-//module to generate random numbers between 1 and 6 inclusive on a roll key input KEY[0]
-module randomNumGernerator(CLOCK_50,KEY,HEX0,SW);
+//module to generate random numbers between 1 and 6 inclusive on a roll key input rollTheDice
+module randomNumGernerator(clock,rollTheDice,Clear_rollTheDice,diceNumber);
  
 	// Inputs
-	input CLOCK_50;
-	input [3:0] KEY;
-	// input KEY[0]; // On click generate number
+	input clock,rollTheDice,Clear_rollTheDice;
+	// input rollTheDice; // On click generate number
 	// input KEY[3]; // Reset
-	input [17:0] SW; 
-	// SW[8] is Clear_b to clear the displayed number
+	// Clear_rollTheDice is Clear_b to clear the displayed number
 
 	// Outputs
-	output [6:0] HEX0;
+	output [3:0] diceNumber;
 	
 	wire [3:0] rnd;
 	wire Enable;
 	
-	RateDivider one(.rate('b00),.clock(CLOCK_50),.Clear_b(SW[8]),.roll(~KEY[0]), .Enable(Enable));
-	DisplayCounter one1(.clock(CLOCK_50),.Clear_b(SW[8]),.roll(~KEY[0]),.Enable(Enable),.out(rnd));
+	RateDivider one(.rate('b00),.clock(clock),.Clear_b(Clear_rollTheDice),.roll(~rollTheDice), .Enable(Enable));
+	DisplayCounter one1(.clock(clock),.Clear_b(Clear_rollTheDice),.roll(~rollTheDice),.Enable(Enable),.out(rnd));
 
 	// Instantiate the Unit Under Test (UUT)
-	//randomNumberGenerator instOfRandomNumberGenerator (.clock(CLOCK_50),.reset(~KEY[3]),.rnd(rnd));
+	//randomNumberGenerator instOfRandomNumberGenerator (.clock(clock),.reset(~KEY[3]),.rnd(rnd));
 
 	//show the random number on HEX0 i.e result[3:0]
-	HEX_seg HEX_0(.c0(rnd[0]),.c1(rnd[1]),.c2(rnd[2]),.c3(rnd[3]),.seg(HEX0));
-     
+	//HEX_seg HEX_0(.c0(rnd[0]),.c1(rnd[1]),.c2(rnd[2]),.c3(rnd[3]),.seg(HEX0));
+    assign diceNumber[3] = rnd[3]; 
+    assign diceNumber[2] = rnd[2]; 
+    assign diceNumber[1] = rnd[1]; 
+    assign diceNumber[0] = rnd[0]; 
 endmodule
 
 //*********************************************************************
