@@ -63,22 +63,33 @@ Weekly Reports
 <In this space, provide a report each week of what worked and what didn't, and what (if any) changes were made to your proposal)>
 
 
-[This is an example of a report where things didn't go so well.]
 Week 1: 
-	We added and tested the sensors and the main FSM. 
-	The distance sensor we had intended to use didn't work as expected (wasn't precise enough at further distances, only seems to work accurately within 5-10cm), so instead we've decided to change the project to use a light sensor instead.
-	Had trouble getting the FSM to work (kept getting stuck in state 101, took longer to debug than expected), so we may not be able to add the high score feature. We have updated that in the project description as an optional feature.
+We successfully came up with a mathematical formula to create a lookup table that maps the coordinates of the board to the boxes. Then we implemented this formula using a C program to create the lookup table in Verilog.
+Using an online picture for the board background wasn't ideal, because all the pictures we found were very complicated and full of colors, which was too much for the low-resolution screen. We had to design a bmp background of the game board from scratch and convert it to mif. The result wasn't very good. So we will be trying to fix that next week.  
+
+Week 2:
+We successfully managed to fix the board background picture this week as planned. We did so by using a different online picture of a slightly higher resolution and then manually drawing over certain pixels in order to increase clarity and add a greater contrast between different elements of the board. 
+We also were able to make the basic functionality of the game work meaning that we were able to keep track of the position of each player and change it accordingly based on the dice number rolled and presence of any snakes or ladders. However, we had difficulty in displaying the game pieces and their simple movement on the screen which we will attempt to get working next week.   
+
+Week 3:
+We were able to successfully finish the project on time. Before the start of this week, we had three problems: 
+ 
+We weren't able to reset the pieces after moving them (eg. you were at 4 and you get a 5 after rolling the dice, you’d move to 9, but also stay at 4), in other words there was a bug were it is possible to have two instances of the same player on the board at the same time.
+We weren't able to show a piece of the other player on the screen. We were able to just show one player on the screen at a time. 
+We weren’t able to start a new game after one ended or in the middle of the game. 
+We fixed the first issue by keeping track of previous position and the color of each player, so that we can draw over the previous position.
+We fixed the second issue by adding a counter. This counter counts how many pixels were drawn after the roll of dice. Once the counter reached 9, we know player one’s piece has been drawn. Then we gave the signal to draw second player’s piece.
+We fixed this issue by fixing the reset command. We made our program to remember the starting position and the previous position of players.
+
+After fixing these issues, we decided to add some features to the game, like making a sound using a speaker after one of the players win, or showing a congratulations message on the screen. We weren't able to do any of these, because we knew that doing any of them will take more time than we have. Instead, we were successful in making the board turn lights on and off as a sign of celebration when one of the players win.
 
 
 
 References
 ----------
-<In this space clearly indicate all external sources used in this project. If you used anyone else's code (from previous B58 projects or other sources) clearly indicate what you used and where you found it. Usage of any material not credited in this space will be considered plagiarism. It is absolutely OK and expected to update this section as you progress in the projected.
+Used .jpg to .mif converter from https://github.com/LonghornEngineer/img2mif
 
-Make sure to document what you added on top of the existing work, especially if you work with a previous project. What is it that YOU added?>
-
-
+Used logic to convert binary to decimal from https://pubweb.eng.utah.edu/~nmcdonal/Tutorials/BCDTutorial/BCDConversion.html?fbclid=IwAR0emfVIdheQlSdZl4Bf6BEZnt6qcfK_8iqh9HHdvLgyzbMJSPxwabHs0VM 
 
 Repo & Video
 ------------
-<At the end of the project, provide links to your code repository and presentation video (and passwords if not public), if you don't want us to publish this info on future course websites, just say so here>
