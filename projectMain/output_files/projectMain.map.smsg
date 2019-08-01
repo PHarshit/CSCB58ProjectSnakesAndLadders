@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at projectMain.v(150): always construct contains both blocking and non-blocking assignments File: C:/Users/harsh/OneDrive - University of Toronto/utsc sem 3/CSCB58/Project/projectMain/projectMain.v Line: 150
+Warning (10268): Verilog HDL information at projectMain.v(356): always construct contains both blocking and non-blocking assignments File: C:/Users/harsh/OneDrive - University of Toronto/utsc sem 3/CSCB58/Project/projectMain/projectMain.v Line: 356
