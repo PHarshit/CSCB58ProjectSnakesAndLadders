@@ -74,15 +74,21 @@ We also were able to make the basic functionality of the game work meaning that 
 Week 3:
 We were able to successfully finish the project on time. Before the start of this week, we had three problems: 
  
-We weren't able to reset the pieces after moving them (eg. you were at 4 and you get a 5 after rolling the dice, you’d move to 9, but also stay at 4), in other words there was a bug were it is possible to have two instances of the same player on the board at the same time.
+We weren't able to reset the pieces after moving them (eg. you were at 4 and you get a 5 after rolling the dice, youâ€™d move to 9, but also stay at 4), in other words there was a bug were it is possible to have two instances of the same player on the board at the same time.
 We weren't able to show a piece of the other player on the screen. We were able to just show one player on the screen at a time. 
-We weren’t able to start a new game after one ended or in the middle of the game. 
+We werenâ€™t able to start a new game after one ended or in the middle of the game. 
 We fixed the first issue by keeping track of previous position and the color of each player, so that we can draw over the previous position.
-We fixed the second issue by adding a counter. This counter counts how many pixels were drawn after the roll of dice. Once the counter reached 9, we know player one’s piece has been drawn. Then we gave the signal to draw second player’s piece.
+We fixed the second issue by adding a counter. This counter counts how many pixels were drawn after the roll of dice. Once the counter reached 9, we know player oneâ€™s piece has been drawn. Then we gave the signal to draw second playerâ€™s piece.
 We fixed this issue by fixing the reset command. We made our program to remember the starting position and the previous position of players.
 
-After fixing these issues, we decided to add some features to the game, like making a sound using a speaker after one of the players win, or showing a congratulations message on the screen. We weren't able to do any of these, because we knew that doing any of them will take more time than we have. Instead, we were successful in making the board turn lights on and off as a sign of celebration when one of the players win.
+After fixing these issues, we decided to add some features to the game, like making a sound using a speaker after one of the players win, or showing a congratulations message on the screen. We weren't able to do any of these, because we knew that doing any of them will take more time than we have. 
+Instead, we were successful in making the board turn lights blink in pattern as a sign of celebration when one of the players win.We also added a feature where a green light turns on every time a player lands on a ladder, and a red light turn on when a player lands on a snake.
 
+
+What we would have done if we had more time
+-----------------------------------------------------------
+
+If we had more time we would have drawn the background rather than using a mif file. This would have allowed us to add animation for moving the pieces on the board (as well going up the ladder and going down the snake).
 
 
 References
