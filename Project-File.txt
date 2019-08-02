@@ -15,14 +15,14 @@ Last Name: Dahal
 Student Number: 1005198046
 UofT E-mail Address: kshitij.dahal@mail.utoronto.ca
 
-Team Member C (Optional)
+Team Member C
 -------------
 First Name: Mahamad
 Last Name: Jawid
 Student Number: 1005580961
 UofT E-mail Address: jawad.jawid@mail.utoronto.ca
 
-Team Member D (Optional)
+Team Member D
 -------------
 First Name: Raj
 Last Name: Patel
@@ -49,10 +49,10 @@ We will attempt to complete the counters for the player's turns and work on impl
 a random roll sequencer. We will also try to get the board to display on the screen.
 
 What is your plan for the second week?
-We will attempt to implement keeping track of the game pieces and begin making the animations.
+We will attempt to implement keeping track of the game pieces and implement restarting the game.
 
 What is your plan for the third week?
-We will finish the animations and implement restarting the game.
+We will finish the project and add features to show the winner
 
 What is your backup plan if things don't work out as planned?
 A 2d car game where the player must avoid obstacles.
@@ -99,3 +99,5 @@ Used logic to convert binary to decimal from https://pubweb.eng.utah.edu/~nmcdon
 
 Repo & Video
 ------------
+Link to Repo:   https://github.com/PHarshit/CSCB58ProjectSnakesAndLadders
+Link to Video:  https://youtu.be/GuBoGwkqVcU
