@@ -37,12 +37,10 @@ Project Title: Snakes and ladders
 
 
 Provide a one paragraph description of your project:
-It's a snakes and ladders game where the counters are used to keep track of
-the players turn and registers keep track of the player's position on the board.
+It's a snakes and ladders game where the counters are used to roll the dice (random) and registers used
+to keep track of the players turn and player's position on the board.
 Hex displays will display who's turn it is and the number rolled. A screen will be used
-to display the game pieces and the board itself. Animations will be implemented to
-enhance the movement of the game pieces.
-
+to display the game pieces and the board itself.
 
 What is your plan for the first week?
 We will attempt to complete the counters for the player's turns and work on implementing 
@@ -60,16 +58,20 @@ A 2d car game where the player must avoid obstacles.
 
 Weekly Reports
 --------------
-<In this space, provide a report each week of what worked and what didn't, and what (if any) changes were made to your proposal)>
-
-
 Week 1: 
-We successfully came up with a mathematical formula to create a lookup table that maps the coordinates of the board to the boxes. Then we implemented this formula using a C program to create the lookup table in Verilog.
-Using an online picture for the board background wasn't ideal, because all the pictures we found were very complicated and full of colors, which was too much for the low-resolution screen. We had to design a bmp background of the game board from scratch and convert it to mif. The result wasn't very good. So we will be trying to fix that next week.  
+We successfully came up with a mathematical formula to create a lookup table that maps the coordinates of the board to the boxes. 
+Then we implemented this formula using a C program to create the lookup table in Verilog.
+Using an online picture for the board background wasn't ideal, because all the pictures we found were very complicated and full of colors, 
+which was too much for the low-resolution screen. We had to design a bmp background of the game board from scratch and convert it to mif. 
+The result wasn't very good. So we will be trying to fix that next week.  
 
 Week 2:
-We successfully managed to fix the board background picture this week as planned. We did so by using a different online picture of a slightly higher resolution and then manually drawing over certain pixels in order to increase clarity and add a greater contrast between different elements of the board. 
-We also were able to make the basic functionality of the game work meaning that we were able to keep track of the position of each player and change it accordingly based on the dice number rolled and presence of any snakes or ladders. However, we had difficulty in displaying the game pieces and their simple movement on the screen which we will attempt to get working next week.   
+We successfully managed to fix the board background picture this week as planned. 
+We did so by using a different online picture of a slightly higher resolution and then manually drawing 
+over certain pixels in order to increase clarity and add a greater contrast between different elements of the board. 
+We also were able to make the basic functionality of the game work meaning that we were able to keep track 
+of the position of each player and change it accordingly based on the dice number rolled and presence of any snakes or ladders. 
+However, we had difficulty in displaying the game pieces and their simple movement on the screen which we will attempt to get working next week.   
 
 Week 3:
 We were able to successfully finish the project on time. Before the start of this week, we had three problems: 
