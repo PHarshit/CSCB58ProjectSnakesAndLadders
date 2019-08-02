@@ -99,6 +99,8 @@ Used .jpg to .mif converter from https://github.com/LonghornEngineer/img2mif
 
 Used logic to convert binary to decimal from https://pubweb.eng.utah.edu/~nmcdonal/Tutorials/BCDTutorial/BCDConversion.html?fbclid=IwAR0emfVIdheQlSdZl4Bf6BEZnt6qcfK_8iqh9HHdvLgyzbMJSPxwabHs0VM 
 
+VGA module is taken from Lab6 of CSCB58 summer 2019 course.
+
 Repo & Video
 ------------
 Link to Repo:   https://github.com/PHarshit/CSCB58ProjectSnakesAndLadders
