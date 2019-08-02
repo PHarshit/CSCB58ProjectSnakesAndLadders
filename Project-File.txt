@@ -35,7 +35,6 @@ Project Plan
 
 Project Title: Snakes and ladders
 
-
 Provide a one paragraph description of your project:
 It's a snakes and ladders game where the counters are used to roll the dice (random) and registers used
 to keep track of the players turn and player's position on the board.
